@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "<++ PACKAGE_NAME ++>"
+version = "0.0.1"
+dependencies = [
+  "<++ PACKAGE_DEPENDENCIES ++>"
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Houchen Li", email = "houchen_li@hotmail.com"},
+]
+maintainers = [
+  {name = "Houchen Li", email = "houchen_li@hotmail.com"}
+]
+description = "<++ PACKAGE_DESCRIPTION ++>"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["<++ PACKAGE_KEYWORDS ++>"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+gui = [
+  "PACKAGE_OPTIONAL_GUI_DEPENDENCIES"
+]
+cli = [
+  "PACKAGE_OPTIONAL_CLI_DEPENDENCIES"
+]
+
+[project.urls]
+#Homepage = "https://example.com"
+#Documentation = "https://readthedocs.org"
+Repository = "https://github.com/houchen-li/<++ PACKAGE_NAME ++>.git"
+"Bug Tracker" = "https://github.com/houchen-li/<++ PACKAGE_NAME ++>/issues"
+Changelog = "https://github.com/houchen-li/<++ PACKAGE_NAME ++>/blob/master/CHANGELOG.md"
+
+[project.scripts]
+<++ PACKAGE_CLI_BINARY_NAME> = "<++ PATH_TO_FILE ++>:<++ FUNCTION_NAME ++>"
+
+[project.gui-scripts]
+<++ PACKAGE_GUI_BINARY_NAME> = "<++ PATH_TO_FILE ++>:<++ FUNCTION_NAME ++>"
+
+#[project.entry-points."<++ PACKAGE_NAME ++>.magical"]
+#<++ PACKAGE_ENTRY_POINTS ++> = "<++ PACKAGE_NAME ++>:main_tomatoes"
+
+[tool.ruff]
+line-length = 100
+
